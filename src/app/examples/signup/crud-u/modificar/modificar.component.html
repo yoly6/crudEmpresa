@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+      <div class="filter"></div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register">
+<form class="register-form">
+
+    <br>
+    <br>
+    <label>Id</label>
+<div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+  <div class="input-group-prepend">
+    <span class="input-group-text">
+        <i class="nc-icon nc-badge"></i>
+    </span>
+  </div>
+    <input type="text" class="form-control" [(ngModel)]="usuario.id" name="cell" placeholder="Id" (focus)="focus1=true" (blur)="focus1=false" >
+</div>
+    <label>Nombre</label>
+    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+            <i class="nc-icon nc-single-02"></i>
+        </span>
+      </div>
+      
+        <input type="text" class="form-control" [(ngModel)]="usuario.primerNombre" name="user" placeholder="Nombre" (focus)="focus=true" (blur)="focus=false" >
+    </div>
+    <label>Email</label>
+    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+            <i class="nc-icon nc-email-85"></i>
+        </span>
+      </div>
+      
+        <input type="text" class="form-control" [(ngModel)]="usuario.correo" name="mail" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+    </div>
+<label>Telefono</label>
+<div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+  <div class="input-group-prepend">
+    <span class="input-group-text">
+        <i class="nc-icon nc-mobile"></i>
+    </span>
+  </div>
+    <input type="text" class="form-control" [(ngModel)]="usuario.celular" name="cell" placeholder="Celular" (focus)="focus1=true" (blur)="focus1=false" >
+</div>
+    <label>Contraseña</label>
+    <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+            <i class="nc-icon nc-key-25"></i>
+        </span>
+      </div>
+        <input type="password" class="form-control" [(ngModel)]="usuario.clave" name="calve" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+    </div>
+    <div>
+        <select [(ngModel)]="rol" name="rol">
+            <option [ngValue]="roles" *ngFor ="let roles of lista">{{roles.nombreRol}}</option>
+        </select>
+      </div>
+    <button class="btn btn-danger btn-block btn-round" (click)="update()">Modificar</button>
+
+  </form>
+                    </div>
+                  </div></div></div></div></div>

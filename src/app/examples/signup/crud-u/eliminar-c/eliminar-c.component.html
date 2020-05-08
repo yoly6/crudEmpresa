@@ -1,0 +1,16 @@
+<h3><div class="p-3 mb-2 bg-dark text-info">Clientes  
+
+</div></h3><p>Seleccione en el nombre que desea eliminar que desea eliminar </p>
+<br>
+<br>
+<br>
+<div class="container col-md-8"> 
+  <h3><label >Nombre::</label></h3>
+    <select [(ngModel)]="usuario" name="cliente">
+     <option [ngValue]="clientes" *ngFor ="let clientes of lista">{{clientes.primerNombre}}</option>
+    </select>
+  </div>
+  <br><br>
+<button class="btn btn-danger btn-block btn-round" (click)="eliminarC()">Eliminar</button>
+
+
